@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/dist/main.css" rel="stylesheet" />
+        <title>Tailwind Navbar</title>
+    </head>
+    <body>
+        <nav class="p-2 relative border-b border-gray-200">
+            <div class="container mx-auto">
+                <button class="md:hidden cursor-pointer js-navbar-open">
+                    <img
+                        src="./assets/menu.svg"
+                        alt="Navigation menu button"
+                        width="24"
+                        height="24"
+                    />
+                </button>
+                <div
+                    class="bg-white grid grid-rows-[min-content_1fr] md:static absolute top-0 right-0 transition-all duration-300 ease-in-out p-2 w-full js-navbar-menu md:transform-none md:transition-none md:opacity-100"
+                >
+                    <button
+                        class="md:hidden cursor-pointer justify-self-end js-navbar-close"
+                    >
+                        <img
+                            src="./assets/close.svg"
+                            alt="Navigation menu button"
+                            width="24"
+                            height="24"
+                        />
+                    </button>
+                    <ul
+                        class="mt-2 list-none flex flex-col items-center md:flex-row md:gap-6"
+                    >
+                        <li
+                            class="text-center w-full md:w-auto py-5 md:after:hidden after:absolute after:top-0 relative after:content-[''] after:block after:border-t after:border-gray-200 after:w-full"
+                        >
+                            <a href="#">Home</a>
+                        </li>
+                        <li
+                            class="text-center w-full md:w-auto py-5 md:after:hidden after:absolute after:top-0 relative after:content-[''] after:block after:border-t after:border-gray-200 after:w-full"
+                        >
+                            <a href="#">About</a>
+                        </li>
+                        <li
+                            class="text-center w-full md:w-auto py-5 md:after:hidden after:absolute after:top-0 relative after:content-[''] after:block after:border-t after:border-gray-200 after:w-full"
+                        >
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <script src="./js/navbar.js"></script>
+    </body>
+</html>
